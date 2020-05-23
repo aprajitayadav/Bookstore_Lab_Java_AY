@@ -6,6 +6,8 @@ public class Bookstore {
 
     private ArrayList<String> titles;
     String name;
+    String resp;
+    String resp1;
     String address;
     String opentoday;
     String closetime;
@@ -14,6 +16,7 @@ public class Bookstore {
     String searcharray;
     int z = 0;
     int count;
+    int counttot;
 
     // This is the constructor of the class Bookstore
     public Bookstore(String name, String address) {
@@ -21,6 +24,40 @@ public class Bookstore {
         this.address = address;
         titles = new ArrayList<String>();
         loadTitles();
+    }
+
+    // Getters and Setters for bookname, total and search
+    public String getname() {
+        return name;
+    }
+
+    public String setname(String name) {
+        return this.name = name;
+    }
+
+    public int gettotal(String resp) {
+        if (resp1 == "Yes")
+            ;
+        {
+            this.counttot = titles.size();
+            return counttot;
+        }
+
+    }
+
+    /* Getter for titles and Search using for loop */
+    public void searchtitle(String sname) {
+        System.out.println("We are searching the titles list for your search word : " + sname);
+        for (z = 0; z < titles.size(); z++) {
+            boolean ans = titles.get(z).contains(sname);
+            if (ans) {
+                System.out.println(titles.get(z));
+                count++;
+            }
+        }
+        if (count == 0) {
+            System.out.println("We are Sorry, Try with another title!");
+        }
     }
 
     private void loadTitles() {
@@ -61,21 +98,7 @@ public class Bookstore {
         {
             System.out.println(titles.get(z));
         }
-    }
 
-    /* Search titles */
-    public void searchtitle(String sname) {
-        System.out.println("We are searching the titles list for your search word : " + sname);
-        for (z = 0; z < titles.size(); z++) {
-            boolean ans = titles.get(z).contains(sname);
-            if (ans) {
-                System.out.println(titles.get(z));
-                count++;
-            }
-        }
-        if (count == 0) {
-            System.out.println("We are Sorry, Try with another title!");
-        }
     }
 
     /* Print the Bookstore details */

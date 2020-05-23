@@ -8,3 +8,8 @@ Just Enough Requirements and Documentation
 Python Crash Course
 Cucumber and Gherkin for Java 
 Machine Learning with Python
+Java for Beginners
+Python for Basic Learning
+DOTNET Programming 2.0
+Microsoft Office for Dummies
+Oracle Database 12c
